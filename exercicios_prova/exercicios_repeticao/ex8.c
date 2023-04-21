@@ -2,8 +2,23 @@
 
 #include <stdio.h>
 
-int main(){
-    int a, r;
+int main() {
+    int primeiro_termo, razao, termo_atual, i;
 
-    printf("Indique ");
+    printf("Digite o primeiro termo da PA: ");
+    scanf("%d", &primeiro_termo);
+
+    printf("Digite a razao da PA: ");
+    scanf("%d", &razao);
+
+    termo_atual = primeiro_termo;
+
+    printf("Os 10 primeiros termos da PA sao:\n");
+
+    for (i = 0; i < 10; i++) {
+        printf("%d ", termo_atual);
+        termo_atual += razao;
+    }
+
+    return 0;
 }
