@@ -7,7 +7,7 @@ Este  programa  deverá  calcular  emostrar : a. A menor altura do grupo; b. A m
 
 int main(){
     float altura, maior_altura, menor_altura;
-printf("Digite a altura de 15 pessoas:\n");
+    printf("Digite a altura de 15 pessoas:\n");
 
     // ler altura da primeira pessoa para inicializar menor e maior altura
     scanf("%f", &altura);
