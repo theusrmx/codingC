@@ -15,19 +15,27 @@ A dona de casa não quer andar com moedas nem notas de R$2,00 e os salários dev
 #include <stdio.h>
 
 int main(){
-
-    float salario_empregada, salario_baba, soma;
+    double valor1, valor2, soma;
     int n100, n50, n20, n10, n5, n2;
 
-    printf("Digite o salario da empregada: ");
-    scanf("%f", salario_empregada);
-    printf("Digite o salario da baba: ");
-    scanf("%f", salario_baba);
-
-    
-
-            
-
-
+    printf("Digite o primeiro valor: ");
+    scanf("%lf", &valor1);
+    printf("Digite o segundo valor: ");
+    scanf("%lf", &valor2);
+    soma = valor1 + valor2;
+    n100 = soma / 100;
+    soma = soma - (n100*100);
+    n50 = soma / 50;
+    soma = soma - (n50*50);
+    n20 = soma / 20;
+    soma = soma - (n20*20);
+    n10 = soma / 10;
+    soma = soma - (n10*10);//
+    n5 = soma / 5;
+    soma = soma - (n5*5);
+    n2 = soma / 2;
+    soma = soma - (n2*2);
+    printf("Notas: %d x R$ 100,00 / %d x R$ 50,00 / %d x R$ 20,00 / %d x R$ 10,00 / %d x R$ 5,00 / %d x R$ 2,00", n100, n50, n20, n10, n5, n2);
     return 0;
 }
+
