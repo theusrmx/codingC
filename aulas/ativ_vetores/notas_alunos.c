@@ -3,13 +3,9 @@
 Matheus Ramos Marcolino - 202302376819
 Lucas de Souza Pereira - 202303152035*/
 
-<<<<<<< HEAD
-//função para calcular a media
-float calculo_media(float vetor[], int qnt_alunos){
-=======
 
 float calculo_media(float vetor[], int qnt_alunos){ //parametros será um vetor e a quantia de alunos
->>>>>>> 8457156eb46b78f97fb49f14ae6ef6002bce4a89
+
     float soma = 0, media;
 
     for (int i = 0; i < qnt_alunos; i++)
@@ -17,12 +13,11 @@ float calculo_media(float vetor[], int qnt_alunos){ //parametros será um vetor 
         soma += vetor[i];
     } //irá ler todas os vetores e soma-los a cada leitura
     
-<<<<<<< HEAD
+
     media = soma/qnt_alunos;
-=======
+
     
     media = soma/qnt_alunos; //calculo da media
->>>>>>> 8457156eb46b78f97fb49f14ae6ef6002bce4a89
 
     printf("A media das notas desta sala eh: %.1f", media);
 
@@ -31,7 +26,6 @@ float calculo_media(float vetor[], int qnt_alunos){ //parametros será um vetor 
 
 }
 
-<<<<<<< HEAD
 //função para mostrar as notas 
 float mostrar_notas(float vetor_notas[],int qnt_alunos){
 
@@ -45,8 +39,6 @@ float mostrar_notas(float vetor_notas[],int qnt_alunos){
 }
 
 
-=======
->>>>>>> 8457156eb46b78f97fb49f14ae6ef6002bce4a89
 int main(){
     //declaração vetor e variaveis
     int alunos = 0;
@@ -62,12 +54,7 @@ int main(){
         scanf("%f", &vetor_notas[i]);//a nota digitada sera armazenada no indice correspondente
     }
 
-<<<<<<< HEAD
-    mostrar_notas(vetor_notas, alunos);
-    calculo_media(vetor_notas, alunos);
-=======
     calculo_media(vetor_notas, alunos); //chamando a função que a realiza o calculo da média, colocando meu array e a quantia de alunos nos parametros solicitados
->>>>>>> 8457156eb46b78f97fb49f14ae6ef6002bce4a89
 
     return 0;
 }
