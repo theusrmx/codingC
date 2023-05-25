@@ -4,7 +4,7 @@
 #define MAX_MESES 12
 
 
-void inserir_vendas(int matriz[MAX_PRODUTOS][MAX_MESES], int produtos, int meses){
+void inserirVendas(int matriz[MAX_PRODUTOS][MAX_MESES], int produtos, int meses){
     for (int i = 0; i < produtos; i++) { //FOR PARA LINHA
         for (int j = 0; j < meses; j++) { //FOR PARA COLUNA
             printf("Insira a quantidade de vendas do Produto %d no Mês %d: ", i+1, j+1);
@@ -13,15 +13,27 @@ void inserir_vendas(int matriz[MAX_PRODUTOS][MAX_MESES], int produtos, int meses
     }
 }
 
-void exibir_vendas_mes(int matriz[MAX_PRODUTOS][MAX_MESES], int produtos, int meses){
+void exibirVendasMes(int matriz[MAX_PRODUTOS][MAX_MESES], int produtos, int meses){
     for (int i = 0; i < produtos; i++){
         for (int j = 0; j <meses; j++){
-            
+             
         }
     }
 }
 
-void exibir_vendas_produto(){
+void exibirVendasProduto(int matriz[MAX_PRODUTOS][MAX_MESES], int produtos, int meses){
+ int produto;
+    printf("Insira o número do produto: ");
+    scanf("%d", &produto);
+
+    if (produto >= 1 && produto <= produtos) {
+        printf("Vendas do Produto %d:\n", produto);
+        for (int j = 0; j < meses; j++) {
+            printf("Mês %d: %d\n", j+1, matriz[produto-1][j]);
+        }
+    } else {
+        printf("Produto inválido!\n");
+    }
 
 }
 
@@ -42,6 +54,30 @@ int main(){
         return 0;
     }
 
-    inserir_vendas(matriz_vendas, produtos, meses);
+    do {
+        printf("\nSelecione uma opção:\n");
+        printf("1. Inserir vendas dos produtos.");
+        printf("2. Exibir informações de vendas de um produto específico\n");
+        printf("3. Exibir informações de vendas de um determinado mês\n");
+        printf("0. Sair\n");
+        scanf("%d", &opcao);
 
+        switch (opcao) {
+            case 1:
+                inserirVendas(matriz_vendas, produtos, meses);
+                break;
+            case 2:
+                exibirVendasProduto(matriz_vendas, produtos, meses);
+                break;
+            case 3:
+                exibirVendasMes(matriz_vendas, produtos, meses);
+                break;
+            case 0:
+                printf("Programa encerrado.\n");
+                break;
+            default:
+                printf("Opção inválida!\n");
+                break;
+        }
+    } while (opcao != 0);
 }
